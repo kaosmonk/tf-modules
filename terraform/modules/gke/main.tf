@@ -10,7 +10,7 @@ data "google_container_registry_repository" "registry" {
 }
 
 data "google_container_engine_versions" "region" {
-  region = "${var.region}"
+  zone = "${var.zone}"
   project = "${var.project_id}"
 }
 
