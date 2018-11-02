@@ -26,7 +26,7 @@ variable "min_node_count" {
 }
 
 variable "machine_type" {
-  default = "n1-standard-1"
+  default = "n1-standard-2"
 }
 
 variable "zone" {
