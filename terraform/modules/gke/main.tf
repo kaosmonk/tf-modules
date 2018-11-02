@@ -68,7 +68,7 @@ resource "google_container_cluster" "primary" {
   initial_node_count = 1
   remove_default_node_pool = true
   min_master_version       = "${data.google_container_engine_versions.region.latest_master_version}"
-  node_version             = "${data.google_container_engine_versions.region.latest_node_version}"
+  node_version             = "${gke_version}"
 
   # Cluster labels
   resource_labels = "${var.resource_labels}"

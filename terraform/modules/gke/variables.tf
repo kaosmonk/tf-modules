@@ -59,3 +59,7 @@ variable "region" {
 variable "project_id" {
   default = "kraken-221319"
 }
+
+variable "gke_version" {
+  default = "1.10.7-gke.6"
+}
