@@ -40,7 +40,3 @@ variable "sql_replica_zone" {
 variable "sql_user" {
   description = "Username of the host to access the database"
 }
-
-variable "sql_pass" {
-  description = "Password of the host to access the database"
-}
