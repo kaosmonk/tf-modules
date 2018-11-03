@@ -5,16 +5,6 @@ terraform {
 provider "google" {
 }
 
-data "terraform_remote_state" "vpc" {
-  backend = "gcs"
-  config {
-    bucket         = "${var.remote_state_bucket}"
-    prefix         = "vpc/terraform.tfstate"
-    region         = "${var.region}"
-    project        = "${var.project_id}"
-  }
-}
-
 provider "random" {}
 
 resource "random_id" "id" {
