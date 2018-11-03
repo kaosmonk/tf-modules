@@ -37,3 +37,22 @@ resource "google_compute_firewall" "firewall" {
   }
   source_ranges = ["0.0.0.0/0"]
 }
+
+resource "google_compute_firewall" "firewalli-int" {
+  name    = "${var.name}-firewall-int"
+  network = "${google_compute_network.vpc.name}"
+
+  allow {
+    protocol = "icmp"
+  }
+
+  allow {
+    protocol = "tcp"
+  }
+
+  allow {
+    protocol = "udp"
+  }
+
+  source_ranges = ["${var.subnet_cidr}"]
+}
