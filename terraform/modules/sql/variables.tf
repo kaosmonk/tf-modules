@@ -5,7 +5,6 @@ variable "region" {
 # Cloud SQL variables
 
 variable "availability_type" {
-  type        = "map"
   description = "Availability type for HA"
 }
 
