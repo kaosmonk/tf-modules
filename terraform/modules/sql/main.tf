@@ -9,7 +9,7 @@ provider "random" {}
 
 resource "random_id" "id" {
   byte_length = 4
-  prefix      = "sql-${terraform.workspace}-"
+  prefix      = "sql-"
 }
 
 resource "random_id" "user-password" {
